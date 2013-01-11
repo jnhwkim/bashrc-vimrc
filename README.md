@@ -10,3 +10,4 @@ bashrc-vimrc
 cd ~
 git clone https://github.com/jnhwkim/bashrc-vimrc.git .
 </pre>
+- Be careful, this action will overwrite your `.bash_profile`, `.bashrc` and `.vimrc`.
