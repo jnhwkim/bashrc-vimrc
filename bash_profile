@@ -3,12 +3,11 @@ source ~/.bashrc
 export CLICOLOR=1
 export LSCOLORS=ExFxCxDxBxegedabagacad
 
+# For OSX
+export LS_COLORS='*.lua=01;33:'
+alias ls='gls --color=auto'
+
 # git command
-if [ ! -f ~/.git-prompt.sh ];
-then
-   echo "Downloading .git-prompt.sh to ~"
-   curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh -o ~/.git-prompt.sh
-fi
-source ~/.git-prompt.sh
-gitcmd="\[$MAGENTA\]\$(__git_ps1)\[$WHITE\]\$"
-PS1=${PS1/\\\$/$gitcmd}
+GIT_PROMPT_ONLY_IN_REPO=1
+GIT_PROMPT_THEME=Single_line_Minimalist
+source ~/.bash-git-prompt/gitprompt.sh
